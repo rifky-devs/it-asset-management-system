@@ -29,5 +29,8 @@ a {
 
 .asset-card {
   border: 1px solid #ccc;
-  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  width: 180px;
+  box-sizing: border-box;
 }
