@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
