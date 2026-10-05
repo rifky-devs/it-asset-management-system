@@ -34,3 +34,7 @@ a {
   width: 180px;
   box-sizing: border-box;
 }
+
+#asset-title {
+  margin-bottom: 20px;
+}
