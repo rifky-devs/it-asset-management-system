@@ -44,3 +44,7 @@ a {
     flex-direction: column;
   }
 }
+
+a:hover {
+  text-decoration: underline;
+}
