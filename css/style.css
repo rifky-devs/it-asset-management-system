@@ -38,3 +38,9 @@ a {
 #asset-title {
   margin-bottom: 20px;
 }
+
+@media (max-width: 600px) {
+  .asset-list {
+    flex-direction: column;
+  }
+}
