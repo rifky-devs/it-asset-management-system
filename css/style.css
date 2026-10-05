@@ -13,3 +13,7 @@ nav {
 a {
   text-decoration: none;
 }
+
+.page-title {
+  font-size: 35px;
+}
