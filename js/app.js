@@ -1,7 +1,9 @@
-let totalAssets = 12;
-let activeAssets = 9;
-let maintenanceAssets = 2;
-let retiredAssets = 1;
+const assetSumary = {
+  total: 12,
+  active: 9,
+  maintance: 2,
+  retired: 1,
+};
 
 document.querySelector('#total-assets').textContent = totalAssets;
 document.querySelector('#active-assets').textContent = activeAssets;

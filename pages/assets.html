@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assets</title>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
-    <h1>IT Assets</h1>
+    <h1 class="page-title">IT Assets</h1>
 
     <nav>
-      <a href="../index.html">Dashboard</a>
-      <a href="assets.html">Assets</a>
-      <a href="users.html">Users</a>
-      <a href="requests.html">Request</a>
+      <ul class="nav-list">
+        <li><a href="../index.html">Dashboard</a></li>
+        <li><a href="assets.html">Assets</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a href="requests.html">Requests</a></li>
+      </ul>
+    </nav>
 
     <main>
       <section>
@@ -28,19 +33,11 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <td>Laptop Dell</td>
-              <td>Laptop</td>
-              <td>Active</td>
-              <td>Rifky</td>
-            </tr>
-          </tbody>
+          <tbody id="asset-table-body"></tbody>
         </table>
       </section>
     </main>
-  </body>
-</html>
-    </nav>
+
+    <script src="../js/assets.js"></script>
   </body>
 </html>
