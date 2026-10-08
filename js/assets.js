@@ -18,7 +18,18 @@ const assets = [
     owner: 'IT Team',
   },
 ];
+const form = document.querySelector('#asset-form');
 
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const name = document.querySelector('#asset-name').value;
+  const category = document.querySelector('#asset-category').value;
+  const owner = document.querySelector('#asset-owner').value;
+  const status = document.querySelector('#asset-status').value;
+
+  console.log(name, category, owner, status);
+});
 const tableBody = document.querySelector('#asset-table-body');
 
 assets.forEach(function (asset) {

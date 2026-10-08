@@ -23,6 +23,20 @@
       <section>
         <h2>Asset List</h2>
 
+        <form id="asset-form">
+          <input id="asset-name" type="text" placeholder="Asset name" />
+          <input id="asset-category" type="text" placeholder="Category" />
+          <input id="asset-owner" type="text" placeholder="Owner" />
+
+          <select id="asset-status">
+            <option value="Active">Active</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Retired">Retired</option>
+          </select>
+
+          <button type="submit">Add Asset</button>
+        </form>
+        
         <table>
           <thead>
             <tr>
