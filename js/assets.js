@@ -18,27 +18,57 @@ const assets = [
     owner: 'IT Team',
   },
 ];
+
 const form = document.querySelector('#asset-form');
+const tableBody = document.querySelector('#asset-table-body');
+
+function renderAssets() {
+  tableBody.replaceChildren();
+
+  assets.forEach(function (asset) {
+    const row = document.createElement('tr');
+
+    const nameCell = document.createElement('td');
+    nameCell.textContent = asset.name;
+
+    const categoryCell = document.createElement('td');
+    categoryCell.textContent = asset.category;
+
+    const statusCell = document.createElement('td');
+    statusCell.textContent = asset.status;
+
+    const ownerCell = document.createElement('td');
+    ownerCell.textContent = asset.owner;
+
+    row.append(nameCell, categoryCell, statusCell, ownerCell);
+    tableBody.append(row);
+  });
+}
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const name = document.querySelector('#asset-name').value;
-  const category = document.querySelector('#asset-category').value;
-  const owner = document.querySelector('#asset-owner').value;
+  const name = document.querySelector('#asset-name').value.trim();
+  const category = document.querySelector('#asset-category').value.trim();
+  const owner = document.querySelector('#asset-owner').value.trim();
   const status = document.querySelector('#asset-status').value;
 
-  console.log(name, category, owner, status);
-});
-const tableBody = document.querySelector('#asset-table-body');
+  if (!name || !category || !owner) {
+    alert('Nama asset, kategori, dan owner wajib diisi.');
+    return;
+  }
 
-assets.forEach(function (asset) {
-  tableBody.innerHTML += `
-    <tr>
-      <td>${asset.name}</td>
-      <td>${asset.category}</td>
-      <td>${asset.status}</td>
-      <td>${asset.owner}</td>
-    </tr>
-  `;
+  const newAsset = {
+    name: name,
+    category: category,
+    status: status,
+    owner: owner,
+  };
+
+  assets.push(newAsset);
+
+  renderAssets();
+  form.reset();
 });
+
+renderAssets();
